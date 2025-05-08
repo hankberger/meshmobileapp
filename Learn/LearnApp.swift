@@ -11,7 +11,17 @@ import SwiftUI
 struct LearnApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+               ContentView()
+                   .tabItem {
+                       Label("Journal", systemImage: "book")
+                   }
+                DepthCaptureView()
+                    .tabItem {
+                        Label("Settings", systemImage: "book")
+                    }
+              
+            }
         }
     }
 }
